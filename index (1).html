@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen">
+  <style>
+    body,
+    html {
+      font-family: 'Silkscreen', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    #content {
+      text-align: center;
+      color: white;
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <video autoplay muted loop id="video-background">
+    <source src="https://drive.google.com/uc?export=download&id=1xXEYawGqccgsPOZklW5p_eUTCgzAlbwd" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <audio autoplay>
+    <source src="https://drive.google.com/uc?export=download&id=1k9RY38pxxE_ltMcOqFd1a1SO83DnSvOZ" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <button onclick="playAudio()">Play Audio</button>
+
+  <script>
+    function playAudio() {
+      var audio = document.getElementById("myAudio");
+      audio.play();
+    }
+  </script>
+
+  <div id="content">
+    <h1>Your Title</h1>
+    <p>Your content goes here.</p>
+  </div>
+</body>
+
+</html>
